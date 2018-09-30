@@ -1,6 +1,10 @@
 # wav_encoder_decoder
 Trabalho de Multimidia &amp; Hipermidia
 
+## Ideias:
+
+Utilizar [python](https://docs.python.org/2/library/wave.html)
+
 ## Objetivo
 
 O objetivo principal do projeto é colocar em prática alguns conceitos teóricos abordados em sala
