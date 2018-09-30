@@ -1,6 +1,10 @@
 # wav_encoder_decoder
 Trabalho de Multimidia &amp; Hipermidia
 
+## Ideias:
+
+Utilizar [python](https://docs.python.org/2/library/wave.html)
+
 ## Objetivo
 
 O objetivo principal do projeto é colocar em prática alguns conceitos teóricos abordados em sala
@@ -29,6 +33,14 @@ arquivo binário.
 ## Decodificação
 
 ```decode <entrada.bin> <saida.wav>```
+
+## Antes de usar:
+
+Compilar os dois arquivos .c (a ferramenta e o código de codificação):
+```
+gcc encode.c -o encode
+gcc wave_reader.c -o wave_reader
+```
 
 ### Onde:
 |Item      |Função    |
