@@ -76,5 +76,11 @@ int main(int argc, char **argv) {
 	printf("bytesPerSec: %u\n", header.bytesPerSec);
 	printf("bitsPerSample: %hu\n", header.bitsPerSample);
 
+	FILE * file_tmp= fopen("file_tmp", "wb");
+	if (file_tmp != NULL) {
+	    fwrite(header, sizeof(wav_hdr), 1, file_tmp);
+	    fclose(file_tmp);
+	}
+
 	return EXIT_SUCCESS;
 }

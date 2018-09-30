@@ -26,13 +26,12 @@ int main(int argc, char **argv){
 		}
 		if(i == argc-2){
 			filename = argv[i];
-			printf("%s\n", filename);
+			printf("Aquivo de entrada: %s\n", filename);
 			command = "./wave_reader ";
-			printf("%s\n", command);
 		}
 		if(i == argc-1){
 			filename_out = argv[i];
-			printf("%s\n", filename_out);
+			printf("Arquivo de saida: %s\n\n", filename_out);
 		}
 	}
 	char *f_command = malloc(strlen(command) + strlen(filename) + 1);
