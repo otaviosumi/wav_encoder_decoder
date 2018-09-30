@@ -3,7 +3,7 @@ Trabalho de Multimidia &amp; Hipermidia
 
 ## Ideias:
 
-Utilizar [python](https://docs.python.org/2/library/wave.html)
+Utilizar [python](https://www.tutorialspoint.com/python/python_command_line_arguments.htm) com o [_wave module_](https://docs.python.org/2/library/wave.html)
 
 ## Objetivo
 
