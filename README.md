@@ -17,7 +17,7 @@ em formato WAV sem compressão. Os dados resultantes da compressão devem ser ar
 arquivo binário. 
 
 ## Método:
-  * Para entrada:
+#### Para entrada:
   - [ ] Leitura dos dados no cabeçalho do arquivo WAV
   - [ ] Separação do cabeçalho e do corpo do arquivo
   - [ ] Criação da função para Run-length
@@ -25,7 +25,7 @@ arquivo binário.
   - [ ] Criação da função para Diferenças
   - [ ] Leitura dos inputs (tipos de compressão)
   - [ ] Escrita em arquivo (bin)
-  * Para saída:
+#### Para saída:
   - [ ] Leitura do arquivo de entrada
   - [ ] Criação da função para Run-length
   - [ ] Criação da função para Huffman
