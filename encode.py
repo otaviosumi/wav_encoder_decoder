@@ -26,6 +26,13 @@ def get_diffs(input_channels, samps, chans):
 			diff_channels_out[i][ii] = input_channels[i][ii] - input_channels[i][ii - 1]
 	return diff_channels_out
 
+def get_de_diffs(input_channels, samps, chans):
+	diff_channels_out = np.empty((chans, samps), dtype=int)
+	for i in range(chans):
+		diff_channels_out[i][0] = input_channels[i][0]
+		for ii in range(1, samps):
+			diff_channels_out[i][ii] = input_channels[i][ii] + diff_channels_out[i][ii - 1]
+	return diff_channels_out
 
 
 #tratando os argumentos de entrada
@@ -68,5 +75,5 @@ right_channel = np.array(x[1::chans])
 print diff_channels[0]
 diff_channels_out = get_diffs(diff_channels, samps, chans)
 print diff_channels_out[0]
-
-
+diff_channels_out = get_de_diffs(diff_channels_out, samps, chans)
+print diff_channels_out[0]
