@@ -59,3 +59,8 @@ arquivo binário.
 |decode |nome do decodificador|
 |<entrada.bin> |arquivo binário comprimido|
 |<saida.wav> |arquivo WAV sem compressão|
+
+## Módilos instalados:
+|Módulo     |Versão       |
+|-----------|-------------|
+|numpy      |1.15.2       |
