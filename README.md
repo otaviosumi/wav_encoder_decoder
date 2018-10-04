@@ -19,7 +19,7 @@ arquivo binário.
 ## Método:
 #### Para entrada:
   - [x] Leitura dos dados no cabeçalho do arquivo WAV
-  - [ ] Separação do cabeçalho e do corpo do arquivo
+  - [x] Separação do cabeçalho e do corpo do arquivo
   - [ ] Criação da função para Run-length
   - [ ] Criação da função para Huffman
   - [ ] Criação da função para Diferenças
