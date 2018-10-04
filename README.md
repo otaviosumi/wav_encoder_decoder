@@ -60,7 +60,9 @@ arquivo binário.
 |<entrada.bin> |arquivo binário comprimido|
 |<saida.wav> |arquivo WAV sem compressão|
 
-## Módilos instalados:
+## Ferramentas utilizadas:
 |Módulo     |Versão       |
 |-----------|-------------|
+|Python     | 2.7.12      |
 |numpy      |1.15.2       |
+
