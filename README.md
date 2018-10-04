@@ -53,14 +53,6 @@ arquivo binário.
 
 ```decode <entrada.bin> <saida.wav>```
 
-## Antes de usar:
-
-Compilar os dois arquivos .c (a ferramenta e o código de codificação):
-```
-gcc encode.c -o encode
-gcc wave_reader.c -o wave_reader
-```
-
 ### Onde:
 |Item      |Função    |
 |----------|----------|
