@@ -4,7 +4,7 @@ Trabalho de Multimidia &amp; Hipermidia
 ## Introdução
 
 Este trabalho visa em exercitar a prática para a matéria de Multimídia & Hipermídia por meio de codificação de algoritmos de compressão/descompressão de um arquivo de áudio no formato WAV (este guarda a informação à respeito das ondas sonoras).
-Para atingir este objetivo iremos utilizar a linguagem [python](https://www.tutorialspoint.com/python/python_command_line_arguments.htm) em conjunto com módulos para interpretar o arquivo [WAV](https://docs.python.org/2/library/wave.html).
+Para atingir este objetivo iremos utilizar a linguagem [python](https://www.tutorialspoint.com/python/python_command_line_arguments.htm) em conjunto com módulos para interpretar o arquivo [WAV](https://github.com/python/cpython/blob/2.7/Lib/wave.py).
 
 ## Objetivo
 
@@ -18,7 +18,7 @@ arquivo binário.
 
 ## Método:
 #### Para entrada:
-  - [ ] Leitura dos dados no cabeçalho do arquivo WAV
+  - [x] Leitura dos dados no cabeçalho do arquivo WAV
   - [ ] Separação do cabeçalho e do corpo do arquivo
   - [ ] Criação da função para Run-length
   - [ ] Criação da função para Huffman
