@@ -1,4 +1,4 @@
-# wav_encoder_decoder
+# Wav encoder decoder
 Trabalho de Multimidia &amp; Hipermidia
 
 ## Introdução
