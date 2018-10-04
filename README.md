@@ -22,14 +22,14 @@ arquivo binário.
   - [x] Separação do cabeçalho e do corpo do arquivo
   - [ ] Criação da função para Run-length
   - [ ] Criação da função para Huffman
-  - [ ] Criação da função para Diferenças
+  - [x] Criação da função para Diferenças
   - [ ] Leitura dos inputs (tipos de compressão)
   - [ ] Escrita em arquivo (bin)
 #### Para saída:
   - [ ] Leitura do arquivo de entrada
   - [ ] Criação da função para Run-length
   - [ ] Criação da função para Huffman
-  - [ ] Criação da função para Diferenças 
+  - [x] Criação da função para Diferenças 
   - [ ] Leitura dos inputs (tipos de descompressão)
   - [ ] Escrita em arquito (wav)
   
