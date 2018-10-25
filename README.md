@@ -20,7 +20,7 @@ arquivo binário.
 #### Para entrada:
   - [x] Leitura dos dados no cabeçalho do arquivo WAV
   - [x] Separação do cabeçalho e do corpo do arquivo
-  - [ ] Criação da função para Run-length
+  - [x] Criação da função para Run-length
   - [ ] Criação da função para Huffman
   - [x] Criação da função para Diferenças
   - [ ] Leitura dos inputs (tipos de compressão)
