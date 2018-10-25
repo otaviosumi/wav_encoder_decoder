@@ -51,6 +51,28 @@ def build_huffman_tree(input_channels, chans):
 		wav_dict[ch] = sorted(wav_dict[ch].items(), key=operator.itemgetter(1))
 	return wav_dict
 
+
+def get_run_length(input_channels, ch):
+	wav_run = [] #temp
+	for i in range(len(input_channels[ch])):
+		if i > 0:
+			if input_channels[ch][i] != input_channels[ch][i-1]:
+				wav_run.append(1)
+				wav_run.append(input_channels[ch][i])
+			else:
+				wav_run[-2] += 1
+		else:
+			wav_run.append(1)
+			wav_run.append(input_channels[ch][i])
+	return wav_run
+
+
+def build_run_length(input_channels, chans):
+	wav_run = []
+	for i in range(chans):
+		wav_run.append(get_run_length(input_channels, i))
+	return wav_run
+
 def main(argv):
 	#tratando os argumentos de entrada
 	wave_file = wave.open(sys.argv[-2], 'r')
@@ -84,12 +106,26 @@ def main(argv):
 	for i in range(chans):
 		diff_channels[i] = np.array(x[i::chans]) 
 
+	
+	###########################################################
+	#sempre aplica por DIFERENCA
 	print diff_channels[0]
 	diff_channels_out = get_diffs(diff_channels, samps, chans)
 	print diff_channels_out[0]
+	###########################################################
 
+	###########################################################
+	#sempre acha o run length
+	my_runner = build_run_length(diff_channels_out, chans)
+	print my_runner[0]
+	###########################################################
+
+	###########################################################
+	#sempre constroi TABELA DE HUFFMAN
 	my_dict = build_huffman_tree(diff_channels_out, chans)
-	print my_dict[0]
+	#print my_dict[0]
+	###########################################################
+
 
 if __name__ == "__main__":
 	main(sys.argv)
