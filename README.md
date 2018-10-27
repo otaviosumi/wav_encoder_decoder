@@ -65,4 +65,5 @@ arquivo binário.
 |-----------|-------------|
 |Python     | 2.7.12      |
 |numpy      |1.15.2       |
+|anytree    |2.4.3        |
 
