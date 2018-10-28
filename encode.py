@@ -5,17 +5,25 @@ import wave
 import pickle
 import operator
 
-diff_bool = run_bool = huff_bool = False
+diff_bool = False
+run_bool = False
+huff_bool = False
 
 def is_valid(input):
+	global diff_bool
+	global run_bool
+	global huff_bool
 	if input == '-d':
 		diff_bool = True
+		print 'D '+str(diff_bool)
 		return True
 	elif input == '-c':
 		run_bool = True
+		print 'C '+str(run_bool)
 		return True
 	elif input == '-h':
 		huff_bool = True
+		print 'H '+str(huff_bool)
 		return True
 	return False
 
@@ -109,22 +117,28 @@ def main(argv):
 	
 	###########################################################
 	#sempre aplica por DIFERENCA
+	print 'The original from first channel:'
 	print diff_channels[0]
-	diff_channels_out = get_diffs(diff_channels, samps, chans)
-	print diff_channels_out[0]
+	if diff_bool:
+		diff_channels_out = get_diffs(diff_channels, samps, chans)
+	#print diff_channels_out[0]
 	###########################################################
 
 	###########################################################
 	#sempre acha o run length
-	my_runner = build_run_length(diff_channels_out, chans)
-	print my_runner[0]
+	if run_bool:
+		my_runner = build_run_length(diff_channels_out, chans)
+	#print my_runner[0]
 	###########################################################
 
 	###########################################################
 	#sempre constroi TABELA DE HUFFMAN
-	my_dict = build_huffman_tree(diff_channels_out, chans)
-	#print my_dict[0]
+	if huff_bool:
+		my_dict = build_huffman_tree(diff_channels_out, chans)
+		print 'Here goes the huffman: '
+		print my_dict[0]
 	###########################################################
+
 
 
 if __name__ == "__main__":
