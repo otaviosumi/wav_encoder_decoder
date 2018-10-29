@@ -4,10 +4,12 @@ import sys
 import wave 
 import pickle
 import operator
+import Queue
 
 diff_bool = False
 run_bool = False
 huff_bool = False
+
 
 def is_valid(input):
 	global diff_bool
@@ -81,6 +83,7 @@ def build_run_length(input_channels, chans):
 		wav_run.append(get_run_length(input_channels, i))
 	return wav_run
 
+
 def main(argv):
 	#tratando os argumentos de entrada
 	wave_file = wave.open(sys.argv[-2], 'r')
@@ -120,23 +123,24 @@ def main(argv):
 	print 'The original from first channel:'
 	print diff_channels[0]
 	if diff_bool:
-		diff_channels_out = get_diffs(diff_channels, samps, chans)
+		diff_channels = get_diffs(diff_channels, samps, chans)
 	#print diff_channels_out[0]
 	###########################################################
 
 	###########################################################
 	#sempre acha o run length
 	if run_bool:
-		my_runner = build_run_length(diff_channels_out, chans)
+		diff_channels = build_run_length(diff_channels, chans)
 	#print my_runner[0]
 	###########################################################
 
 	###########################################################
 	#sempre constroi TABELA DE HUFFMAN
 	if huff_bool:
-		my_dict = build_huffman_tree(diff_channels_out, chans)
+		my_dict = build_huffman_tree(diff_channels, chans)
 		print 'Here goes the huffman: '
 		print my_dict[0]
+
 	###########################################################
 
 
