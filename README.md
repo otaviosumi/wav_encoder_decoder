@@ -26,12 +26,12 @@ arquivo binário.
   - [x] Leitura dos inputs (tipos de compressão)
   - [ ] Escrita em arquivo (bin)
 #### Para saída:
-  - [ ] Leitura do arquivo de entrada
+  - [x] Leitura do arquivo de entrada
   - [ ] Criação da função para Run-length
   - [ ] Criação da função para Huffman
   - [x] Criação da função para Diferenças 
-  - [ ] Leitura dos inputs (tipos de descompressão)
-  - [ ] Escrita em arquito (wav)
+  - [x] Leitura dos inputs (tipos de descompressão)
+  - [x] Escrita em arquito (wav)
   
 
 ## Codificação
