@@ -4,7 +4,7 @@ import sys
 import wave 
 import pickle
 import operator
-import Queue
+import cPickle as pickle
 
 diff_bool = False
 run_bool = False
@@ -17,15 +17,12 @@ def is_valid(input):
 	global huff_bool
 	if input == '-d':
 		diff_bool = True
-		print 'D '+str(diff_bool)
 		return True
 	elif input == '-c':
 		run_bool = True
-		print 'C '+str(run_bool)
 		return True
 	elif input == '-h':
 		huff_bool = True
-		print 'H '+str(huff_bool)
 		return True
 	return False
 
@@ -87,7 +84,7 @@ def build_run_length(input_channels, chans):
 def main(argv):
 	#tratando os argumentos de entrada
 	wave_file = wave.open(sys.argv[-2], 'r')
-	output_file = open(sys.argv[-1], 'w+b')
+	output_file = sys.argv[-1]
 	# wave_raw_data = open(sys.argv[-2], 'r')
 	argc = len(sys.argv)
 
@@ -105,6 +102,7 @@ def main(argv):
 	#lendo os arquivos
 	chans = wave_file.getnchannels()
 	samps = wave_file.getnframes()
+	params = wave_file.getparams()
 
 	diff_channels = np.empty((chans, samps), dtype=int)
 
@@ -120,7 +118,7 @@ def main(argv):
 	
 	###########################################################
 	#sempre aplica por DIFERENCA
-	print 'The original from first channel:'
+	# print 'The original from first channel:'
 	print diff_channels[0]
 	if diff_bool:
 		diff_channels = get_diffs(diff_channels, samps, chans)
@@ -138,10 +136,22 @@ def main(argv):
 	#sempre constroi TABELA DE HUFFMAN
 	if huff_bool:
 		my_dict = build_huffman_tree(diff_channels, chans)
-		print 'Here goes the huffman: '
-		print my_dict[0]
+		print 'Erro: Huffman nao implementado...'
+		# print my_dict[0]
 
 	###########################################################
+
+
+	with open(output_file, 'wb') as output:
+		pickle.dump(diff_channels, output, pickle.HIGHEST_PROTOCOL)
+	with open('header_' + output_file, 'wb') as output:
+		pickle.dump(diff_bool, output, pickle.HIGHEST_PROTOCOL)
+		pickle.dump(run_bool, output, pickle.HIGHEST_PROTOCOL)
+		pickle.dump(huff_bool, output, pickle.HIGHEST_PROTOCOL)
+		pickle.dump(params, output, pickle.HIGHEST_PROTOCOL)
+		pickle.dump(chans, output, pickle.HIGHEST_PROTOCOL)
+		pickle.dump(samps, output, pickle.HIGHEST_PROTOCOL)
+
 
 
 
