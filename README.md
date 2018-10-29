@@ -23,7 +23,7 @@ arquivo binário.
   - [x] Criação da função para Run-length
   - [ ] Criação da função para Huffman
   - [x] Criação da função para Diferenças
-  - [ ] Leitura dos inputs (tipos de compressão)
+  - [x] Leitura dos inputs (tipos de compressão)
   - [ ] Escrita em arquivo (bin)
 #### Para saída:
   - [ ] Leitura do arquivo de entrada
