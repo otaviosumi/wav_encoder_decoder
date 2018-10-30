@@ -36,7 +36,7 @@ arquivo binário.
 
 ## Codificação
 
-```encode -d -c -h <entrada.wav> <saida.bin>```
+```python encode.py -d -c -h <entrada.wav> <saida.bin>```
 
 
 ### Onde:
@@ -51,7 +51,7 @@ arquivo binário.
 
 ## Decodificação
 
-```decode <entrada.bin> <saida.wav>```
+```python decode.py <entrada.bin> <saida.wav>```
 
 ### Onde:
 |Item      |Função    |
