@@ -1,9 +1,16 @@
 # Wav encoder decoder
 Trabalho de Multimidia &amp; Hipermidia
 
+# Integrandes
+|Aluno      |nº USP    |
+|-----------|----------|
+|Otávio Massola Sumi |8549452|
+|Junior Vengrzynek| 7546798 |
+
+
 ## Introdução
 
-Este trabalho visa em exercitar a prática para a matéria de Multimídia & Hipermídia por meio de codificação de algoritmos de compressão/descompressão de um arquivo de áudio no formato WAV (este guarda a informação à respeito das ondas sonoras).
+Este trabalho visa em exercitar a prática para a matéria de Multimídia & Hipermídia por meio de codificação de algoritmos de compressão/descompressão de um arquivo de áudio no formato WAV (este guarda a informação a respeito das ondas sonoras).
 Para atingir este objetivo iremos utilizar a linguagem [python](https://www.tutorialspoint.com/python/python_command_line_arguments.htm) em conjunto com módulos para interpretar o arquivo [WAV](https://github.com/python/cpython/blob/2.7/Lib/wave.py).
 
 ## Objetivo
@@ -31,7 +38,7 @@ arquivo binário.
   - [ ] Criação da função para Huffman
   - [x] Criação da função para Diferenças 
   - [x] Leitura dos inputs (tipos de descompressão)
-  - [x] Escrita em arquito (wav)
+  - [x] Escrita em arquivo (wav)
   
 
 ## Codificação
