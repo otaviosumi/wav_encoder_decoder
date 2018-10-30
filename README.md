@@ -27,7 +27,7 @@ arquivo binário.
   - [x] Escrita em arquivo (bin)
 #### Para saída:
   - [x] Leitura do arquivo de entrada
-  - [ ] Criação da função para Run-length
+  - [x] Criação da função para Run-length
   - [ ] Criação da função para Huffman
   - [x] Criação da função para Diferenças 
   - [x] Leitura dos inputs (tipos de descompressão)
@@ -60,10 +60,15 @@ arquivo binário.
 |<entrada.bin> |arquivo binário comprimido|
 |<saida.wav> |arquivo WAV sem compressão|
 
+## Observações
+
+Implementar os algoritmos parece algo simples a princípio, porém nota-se o trabalho em manter os dados coerentes e comprimidos de forma correta (resultado final deve ser menor que o arquivo original), o que dependendo do arquivo de entrada e dos métodos utilizados podem não ser o caso.
+
+A compressão por árvore de **[Huffman](https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/)** não foi possível implementar a tempo, a árvore e sua construção se mostrou mais difícil que o esperado.
+
 ## Ferramentas utilizadas:
 |Módulo     |Versão       |
 |-----------|-------------|
 |Python     | 2.7.12      |
 |numpy      |1.15.2       |
-|anytree    |2.4.3        |
 
