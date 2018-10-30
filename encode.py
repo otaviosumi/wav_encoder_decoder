@@ -122,14 +122,14 @@ def main(argv):
 	print diff_channels[0]
 	if diff_bool:
 		diff_channels = get_diffs(diff_channels, samps, chans)
-	#print diff_channels_out[0]
+	print diff_channels[0]
 	###########################################################
 
 	###########################################################
 	#sempre acha o run length
 	if run_bool:
 		diff_channels = build_run_length(diff_channels, chans)
-	print diff_channels[0]
+	#print diff_channels[0]
 	###########################################################
 
 	###########################################################

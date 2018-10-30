@@ -75,7 +75,7 @@ def get_D_run_length(input_channels, ch):
 
 
 def get_D_run(input_channels, chans):
-	wav_run []
+	wav_run = []
 	for i in range(chans):
 		wav_run.append(get_D_run_length(input_channels, i))
 	return wav_run
@@ -104,7 +104,15 @@ def main(argv):
 	#Ordem inversa do encode...........
 	#Run length inverso:
 	if run_bool:
-		diff_channels get_D_run(diff_channels, chans)
+		diff_channels = get_D_run(diff_channels, chans)
+
+	######################################################
+	#Ordem inversa de diferencas.......
+	if diff_bool:
+		diff_channels = get_de_diffs(diff_channels, samps, chans)
+
+	wave_file.setparams(params)
+	wave_file.writeframes(diff_channels)
 
 
 
