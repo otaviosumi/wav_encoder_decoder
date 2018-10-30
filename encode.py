@@ -129,7 +129,7 @@ def main(argv):
 	#sempre acha o run length
 	if run_bool:
 		diff_channels = build_run_length(diff_channels, chans)
-	#print my_runner[0]
+	print diff_channels[0]
 	###########################################################
 
 	###########################################################

@@ -10,6 +10,11 @@ diff_bool = False
 run_bool = False
 huff_bool = False
 
+def my_range(start, end, step):
+    while start <= end:
+        yield start
+        start += step
+
 
 def is_valid(input):
 	global diff_bool
@@ -59,27 +64,21 @@ def build_huffman_tree(input_channels, chans):
 	return wav_dict
 
 
-def get_run_length(input_channels, ch):
-	wav_run = [] #temp
-	for i in range(len(input_channels[ch])):
-		if i > 0:
-			if input_channels[ch][i] != input_channels[ch][i-1]:
-				wav_run.append(1)
-				wav_run.append(input_channels[ch][i])
-			else:
-				wav_run[-2] += 1
-		else:
-			wav_run.append(1)
-			wav_run.append(input_channels[ch][i])
-	return wav_run
 
 
-def build_run_length(input_channels, chans):
+def get_D_run_length(input_channels, ch):
 	wav_run = []
-	for i in range(chans):
-		wav_run.append(get_run_length(input_channels, i))
+	for i in my_range(0, len(input_channels[ch]), 2):
+		for j in range(input_channels[ch][i]):
+			wav_run.append(input_channels[ch][i+1])
 	return wav_run
 
+
+def get_D_run(input_channels, chans):
+	wav_run []
+	for i in range(chans):
+		wav_run.append(get_D_run_length(input_channels, i))
+	return wav_run
 
 def main(argv):
 	argc = len(sys.argv)
@@ -101,7 +100,11 @@ def main(argv):
 		chans = pickle.load(input_data)
 		samps = pickle.load(input_data)
 
-
+	######################################################
+	#Ordem inversa do encode...........
+	#Run length inverso:
+	if run_bool:
+		diff_channels get_D_run(diff_channels, chans)
 
 
 
