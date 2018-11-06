@@ -68,8 +68,8 @@ def build_huffman_tree(input_channels, chans):
 
 def get_D_run_length(input_channels, ch):
 	wav_run = []
-	for i in my_range(0, len(input_channels[ch]), 2):
-		for j in range(len(input_channels[ch][i])):
+	for i in my_range(0, len(input_channels[ch]) - 1, 2):
+		for j in range(input_channels[ch][i]):
 			wav_run.append(input_channels[ch][i+1])
 	return wav_run
 
@@ -112,7 +112,7 @@ def main(argv):
 		diff_channels = get_de_diffs(diff_channels, samps, chans)
 
 	wave_file.setparams(params)
-	wave_file.writeframes(diff_channels)
+	wave_file.writeframes( ''.join(str(e) for e in  diff_channels[0]))
 
 
 
