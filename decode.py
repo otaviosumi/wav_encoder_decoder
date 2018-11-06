@@ -69,7 +69,7 @@ def build_huffman_tree(input_channels, chans):
 def get_D_run_length(input_channels, ch):
 	wav_run = []
 	for i in my_range(0, len(input_channels[ch]), 2):
-		for j in range(input_channels[ch][i]):
+		for j in range(len(input_channels[ch][i])):
 			wav_run.append(input_channels[ch][i+1])
 	return wav_run
 
